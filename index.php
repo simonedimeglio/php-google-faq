@@ -18,10 +18,15 @@
         [
             'question' => "Perché il mio account è associato a un paese?",
             'answer' => "<p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:</p>
-            <p><ol><li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:</p>
-            <ol type =\"a\"><li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li></p>
-            <p><li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></ol></p>
-            <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</ol>
+            <p>
+                <ol>
+                    <li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:</li>
+                    <ol type =\"a\" class=\"ol-list\">
+                        <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
+                        <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li>
+                    </ol></p>
+                    <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.
+                </ol>
             <p>Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.</p>"
         ],
         [
@@ -47,20 +52,45 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
         <title>Domande Frequenti - Privacy e termini - Google</title>
     </head>
     <body>
-        <?php
-            foreach($faqDb as $faq) { ?>
-
-                <div class="question">
-                    <h3><?php echo $faq['question'] ?></h3>
+        <header>
+            <nav>
+                <div class="sx-bar">
+                    <i class="xs-lg fas fa-bars"></i>
+                    <span class="xs-lg">Domande frequenti</span>
+                    <span class="xl"><img src="google-logo.svg" alt="Google Logo"></span>
+                    <span class="xl">Privacy e termini</span>
                 </div>
-
-                <div class="answer">
-                    <?php echo $faq['answer'] ?>
+                <div class="dx-bar">
+                    <i class="fas fa-th"></i>
+                    <span class="custom-button">Accedi</span>
                 </div>
-            <?php }
-        ?>
+                
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <?php
+                foreach($faqDb as $faq) { ?>
+
+                    <div class="question">
+                        <h2><?php echo $faq['question'] ?></h2>
+                    </div>
+
+                    <div class="answer">
+                        <?php echo $faq['answer'] ?>
+                    </div>
+                <?php }
+                ?>
+            </div>
+        </main>
+        
     </body>
 </html>
