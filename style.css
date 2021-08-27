@@ -1,0 +1,87 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding-bottom: 50px;
+}
+
+/* NAVBAR */
+
+nav {
+    height: 60px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 17px;
+}
+
+nav i {
+    font-size: 18px;
+    padding: 0 15px;
+    color: gray;
+    cursor: pointer;
+}
+
+nav .custom-button {
+    color: white;
+    padding: 7px 25px;
+    border-radius: 5px;
+    background-color: rgb(52, 108, 238);
+    cursor: pointer;
+}
+
+.sx-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.sx-bar .xl img {
+    width: 100px;
+    padding-right: 20px;
+}
+
+.sx-bar .xl {
+    display: none;
+}
+
+/* END NAVBAR */
+
+.container { 
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(54, 56, 56);
+}
+
+.question {
+    margin-top: 50px;
+}
+
+.answer p {
+    margin: 20px 0;
+}
+
+.answer p a {
+    text-decoration: none;
+}
+
+.answer .ol-list li {
+    margin: 20px 40px;
+}
+
+/* MEDIA QUERY (for Google logo on xl) */
+@media screen and (min-width: 1200px) {
+    .sx-bar .xl {
+        display: block;
+    }
+    .sx-bar .xs-lg {
+        display: none;
+    }
+}
